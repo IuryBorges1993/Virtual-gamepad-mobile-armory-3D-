@@ -116,46 +116,47 @@ class Player extends iron.Trait {
 	
 	
 	function movimento(){
-	verifica.run=function (){
+		verifica.run=function (){
+	
+		if(UP  ){
 		
-		if(UP){
-
-			addX-=1;
+			
 		
-			object.transform.loc.x=addX;
+			object.transform.loc.x-=0.5;
 			object.transform.buildMatrix();
+			
 
 			 }
 		if(Down){
-
-			addX+=1;
+			
 		
-			object.transform.loc.x=addX;
+		
+			object.transform.loc.x+=0.5;
 			object.transform.buildMatrix();
+			
 
 		 }
 		 if(Left){
-
-			addY+=1;
-		
-			object.transform.loc.y=addY;
+			
+			
+			object.transform.loc.y-=0.5;
 			object.transform.buildMatrix();
+			
 
 		 }
 		  if(Right){
-
-			addY-=1;
+			
+			
 		
-			object.transform.loc.y=addY;
+			object.transform.loc.y+=0.5;
 			object.transform.buildMatrix();
+			
 
 		 }
 		 
  			
 
 			}
-
-
 	}
 public function onMouseDown(button:Int,x:Int,y:Int):Void{
 	
